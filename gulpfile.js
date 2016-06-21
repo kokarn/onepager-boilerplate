@@ -59,3 +59,5 @@ gulp.task( 'markup', function() {
     return gulp.src( './web/index.html' )
         .pipe( gulp.dest( './dist/' ) );
 });
+
+gulp.task( 'default', [ 'styles', 'scripts', 'images', 'markup' ] );
