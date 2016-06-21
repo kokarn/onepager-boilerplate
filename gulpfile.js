@@ -40,6 +40,11 @@ gulp.task( 'styles', function() {
         .pipe( gulp.dest( './dist/' ) )
 });
 
+gulp.task( 'scripts', function() {
+    return gulp.src( './scripts/**/*.js' )
+        .pipe( gulp.dest( './dist/' ) );
+});
+
 gulp.task( 'images', function() {
     return gulp.src( 'design/images/**/*' )
         .pipe( plugins.cache( plugins.imagemin( {
